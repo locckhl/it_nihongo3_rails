@@ -1,3 +1,4 @@
+
 <% if current_user %>
     <p>こんにちは　<%= current_user.email %>　</p>
     
@@ -10,3 +11,8 @@
 <% end %>
 <hr/>
 <h1>HOME PAGE</h1>
+<% if current_user %>    
+    
+    <p> <%= link_to "本一覧をみる", books_path %></p>
+<% else %>
+<% end %>
