@@ -3,9 +3,17 @@
 <h3>名前</h3>
 <%= @user.name %>
 
+<p>
+  <% if @user.avatar.attached? %>
+    <%= image_tag @user.avatar %>
+  <% end %>
+</p>
+
 <h3>年齢</h3>
 <%= @user.age %>
 
 <h3>メールアドレス</h3>
 
 <%= @user.email %>   
+
+　<%= link_to "Edit" , edit_user_registration_path %>
