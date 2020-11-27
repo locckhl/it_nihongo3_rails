@@ -9,6 +9,9 @@
   <% end %>
 </p>
 
+
+  <%= audio_tag( rails_blob_url(@user.avatar), controls: true) %>
+
 <h3>年齢</h3>
 <%= @user.age %>
 
