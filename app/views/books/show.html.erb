@@ -30,7 +30,15 @@
     </div>
 <% end %>
 
-<p>
+<h2>Review list</h2>
+<ul>
+    <% @book.book_review.each do |review|  %>
+        <li><%= review.review %> ( <%= review.user_id %> )</li>
+    <% end %>
+</ul>
+
+
+<div>
    <% if @book.image.attached? %>
      <%= image_tag @book.image %>
    <% end %>
